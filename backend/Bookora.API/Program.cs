@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Bookora.API.Interfaces;
+using Bookora.API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -93,6 +95,15 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.AddScoped<
+    IBusinessRepository,
+    BusinessRepository
+>();
+
+builder.Services.AddScoped<
+    IBusinessService,
+    BusinessService
+>();
 
 var app = builder.Build();
 
