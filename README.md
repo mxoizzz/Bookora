@@ -120,7 +120,7 @@ Bookora/
 ### 1. Clone and Install
 
 ```powershell
-git clone <your-repository-url>
+git clone https://github.com/mxoizzz/Bookora
 cd Bookora
 cd frontend
 bun install
@@ -155,7 +155,7 @@ VITE_SIGNALR_URL=http://localhost:5118/hubs/bookings
 For production, use `frontend/.env.example` as the reference:
 
 ```env
-VITE_API_URL=https://your-render-service.onrender.com/api
+VITE_API_URL=https://bookora-y4uy.onrender.com/api
 ```
 
 ### 4. Run Backend
