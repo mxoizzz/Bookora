@@ -13,7 +13,7 @@ public class TestController : ControllerBase
     {
         return Ok(new
         {
-            message = "Protected route working",
+            message = "Authenticated request succeeded",
             user = User.Identity?.Name
         });
     }

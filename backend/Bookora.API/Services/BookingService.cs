@@ -105,16 +105,15 @@ public class BookingService : IBookingService
 
         await _context.SaveChangesAsync();
         await _hubContext.Clients.All.SendAsync(
-    "SlotUpdated",
-    new
-    {
-        SlotId = slot.Id,
-        Capacity = slot.Capacity,
-        BookedCount = slot.BookedCount,
-        RemainingCapacity = slot.RemainingCapacity,
-        Status = slot.Status
-    }
-);
+            "SlotUpdated",
+            new
+            {
+                SlotId = slot.Id,
+                Capacity = slot.Capacity,
+                BookedCount = slot.BookedCount,
+                RemainingCapacity = slot.RemainingCapacity,
+                Status = slot.Status,
+            });
 
         await _bookingRepository.CreateAsync(booking);
 
