@@ -44,4 +44,10 @@ public class OfferRepository : IOfferRepository
     {
         await _context.SaveChangesAsync();
     }
+
+    public async Task<Offer?> GetByIdAsync(Guid id)
+{
+    return await _context.Offers
+        .FirstOrDefaultAsync(o => o.Id == id);
+}
 }

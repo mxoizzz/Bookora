@@ -49,4 +49,10 @@ public class OfferSlotRepository
     {
         await _context.SaveChangesAsync();
     }
+
+    public async Task<OfferSlot?> GetByIdAsync(Guid id)
+{
+    return await _context.OfferSlots
+        .FirstOrDefaultAsync(s => s.Id == id);
+}
 }

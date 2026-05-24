@@ -4,6 +4,9 @@ namespace Bookora.API.Interfaces;
 
 public interface IOfferSlotRepository
 {
+
+    Task<OfferSlot?> GetByIdAsync(Guid id);
+    
     Task AddSlotAsync(
         OfferSlot slot
     );

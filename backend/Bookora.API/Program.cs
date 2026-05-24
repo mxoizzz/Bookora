@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Bookora.API.Interfaces;
 using Bookora.API.Repositories;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,7 +56,13 @@ builder.Services.AddScoped<TokenService>();
 
 // CONTROLLERS
 
-builder.Services.AddControllers();
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler
+            = ReferenceHandler.IgnoreCycles;
+    });
 
 
 // SWAGGER
@@ -123,6 +130,16 @@ builder.Services.AddScoped<
 builder.Services.AddScoped<
     IOfferSlotService,
     OfferSlotService
+>();
+
+builder.Services.AddScoped<
+    IBookingRepository,
+    BookingRepository
+>();
+
+builder.Services.AddScoped<
+    IBookingService,
+    BookingService
 >();
 
 var app = builder.Build();

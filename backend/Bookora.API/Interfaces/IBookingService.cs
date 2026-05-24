@@ -1,0 +1,14 @@
+using Bookora.API.DTOs.Booking;
+using Bookora.API.Models;
+
+namespace Bookora.API.Interfaces;
+
+public interface IBookingService
+{
+    Task<(bool Success, string Message, Booking? Booking)>
+        CreateBookingAsync(CreateBookingDto dto);
+
+    Task<List<Booking>> GetAllBookingsAsync();
+
+    Task<Booking?> GetBookingByIdAsync(Guid id);
+}

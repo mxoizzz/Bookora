@@ -10,7 +10,13 @@ public class OfferSlot
 
     public int Capacity { get; set; }
 
-    public int RemainingCapacity { get; set; }
+    public int RemainingCapacity
+{
+    get
+    {
+        return Capacity - BookedCount;
+    }
+}
 
     public bool IsActive { get; set; }
         = true;
@@ -24,4 +30,11 @@ public class OfferSlot
     public Guid OfferId { get; set; }
 
     public Offer? Offer { get; set; }
+
+    public int BookedCount { get; set; } = 0;
+
+    public string Status { get; set; } = "Available";
+
+    public ICollection<Booking> Bookings { get; set; }
+        = new List<Booking>();
 }

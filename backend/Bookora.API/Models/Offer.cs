@@ -38,4 +38,11 @@ public class Offer
     public ICollection<OfferSlot> Slots
     { get; set; }
     = new List<OfferSlot>();
+
+    public int MaxBookingPerCustomer { get; set; } = 1;
+
+    public string Status { get; set; } = "Draft";
+
+    public ICollection<Booking> Bookings { get; set; }
+        = new List<Booking>();
 }

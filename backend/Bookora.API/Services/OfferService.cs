@@ -11,6 +11,7 @@ public class OfferService : IOfferService
 
     private readonly IBusinessRepository _businessRepository;
 
+
     public OfferService(
         IOfferRepository offerRepository,
         IBusinessRepository businessRepository
@@ -52,7 +53,11 @@ public class OfferService : IOfferService
 
             BusinessId = dto.BusinessId,
 
-            CreatedAt = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow,
+
+            Status = dto.Status,
+            
+            MaxBookingPerCustomer = dto.MaxBookingPerCustomer,
         };
 
         await _offerRepository.AddOfferAsync(

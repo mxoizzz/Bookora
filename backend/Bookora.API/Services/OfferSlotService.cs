@@ -32,8 +32,6 @@ public class OfferSlotService
 
             Capacity = dto.Capacity,
 
-            RemainingCapacity = dto.Capacity,
-
             OfferId = dto.OfferId,
 
             CreatedAt = DateTime.UtcNow

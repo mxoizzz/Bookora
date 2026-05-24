@@ -19,6 +19,8 @@ public class AppDbContext : DbContext
     public DbSet<OfferSlot> OfferSlots
     => Set<OfferSlot>();
 
+    public DbSet<Booking> Bookings => Set<Booking>();
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

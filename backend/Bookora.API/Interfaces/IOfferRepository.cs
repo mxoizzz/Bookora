@@ -4,6 +4,9 @@ namespace Bookora.API.Interfaces;
 
 public interface IOfferRepository
 {
+
+    Task<Offer?> GetByIdAsync(Guid id);
+    
     Task AddOfferAsync(Offer offer);
 
     Task<List<Offer>> GetOffersByBusinessIdAsync(
