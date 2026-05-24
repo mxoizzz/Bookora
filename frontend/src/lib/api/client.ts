@@ -1,4 +1,23 @@
-export const API_URL = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+const configuredApiUrl = (
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.DEV ? "http://localhost:5118/api" : "")
+).replace(/\/$/, "");
+
+function resolveApiUrl() {
+  if (
+    configuredApiUrl.includes("localhost") &&
+    typeof window !== "undefined" &&
+    window.location.hostname.endsWith(".vercel.app")
+  ) {
+    throw new Error(
+      "VITE_API_URL is still set to localhost in production. Set it to your Render backend URL plus /api, then redeploy.",
+    );
+  }
+
+  return configuredApiUrl;
+}
+
+export const API_URL = resolveApiUrl();
 
 export async function api<T>(
   endpoint: string,
