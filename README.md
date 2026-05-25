@@ -6,11 +6,13 @@
 
 <p align="center">
   <a href="https://frontend-chi-gray-79.vercel.app/">Live Demo</a>
-  ·
+  |
+  <a href="https://drive.google.com/drive/folders/10Mj2yVObbgRNDwGCNz9FQI4HXGO1pgh4?usp=sharing">Video Drive Link</a>
+  |
   <a href="#quick-start">Quick Start</a>
-  ·
+  |
   <a href="#api--swagger">API & Swagger</a>
-  ·
+  |
   <a href="#deployment">Deployment</a>
 </p>
 
@@ -28,6 +30,8 @@ Bookora is a full-stack booking marketplace MVP built for the **Smart Offer Slot
 The product is designed for service-based businesses such as gyms, salons, restaurants, clinics, coaching classes, turfs, spas, gaming zones, and activity centers.
 
 **Live frontend:** [https://frontend-chi-gray-79.vercel.app/](https://frontend-chi-gray-79.vercel.app/)
+
+**Video Drive Link:** [Google Drive folder](https://drive.google.com/drive/folders/10Mj2yVObbgRNDwGCNz9FQI4HXGO1pgh4?usp=sharing)
 
 ## Problem Statement Fit
 
@@ -203,6 +207,69 @@ Key API areas:
 | Bookings | Create booking, fetch confirmation, admin booking views |
 | Realtime | SignalR booking hub at `/hubs/bookings` |
 
+## Screenshots & Output
+
+Final screenshots are embedded below. The demo/submission video remains available in the shared Drive folder:
+
+[Video Drive Link](https://drive.google.com/drive/folders/10Mj2yVObbgRNDwGCNz9FQI4HXGO1pgh4?usp=sharing)
+
+### API Documentation
+
+<img alt="Bookora Swagger API endpoints" src="docs/screenshots/swagger-api.png" />
+
+<details>
+<summary>Public Website</summary>
+
+<img alt="Bookora landing page hero" src="docs/screenshots/screenshot-193.png" />
+<img alt="Bookora landing page platform intro" src="docs/screenshots/screenshot-194.png" />
+<img alt="Bookora platform feature grid" src="docs/screenshots/screenshot-195.png" />
+<img alt="Bookora realtime engine section" src="docs/screenshots/screenshot-196.png" />
+<img alt="Bookora venue categories" src="docs/screenshots/screenshot-197.png" />
+<img alt="Bookora pricing plans" src="docs/screenshots/screenshot-198.png" />
+<img alt="Bookora call to action" src="docs/screenshots/screenshot-199.png" />
+<img alt="Bookora footer" src="docs/screenshots/screenshot-200.png" />
+
+</details>
+
+<details>
+<summary>Marketplace & Booking Flow</summary>
+
+<img alt="Bookora live offers marketplace" src="docs/screenshots/screenshot-201.png" />
+<img alt="Bookora marketplace offer grid" src="docs/screenshots/screenshot-202.png" />
+<img alt="Bookora offer detail page" src="docs/screenshots/screenshot-203.png" />
+<img alt="Bookora offer details and location" src="docs/screenshots/screenshot-204.png" />
+<img alt="Bookora booking form" src="docs/screenshots/screenshot-205.png" />
+<img alt="Bookora completed booking form" src="docs/screenshots/screenshot-206.png" />
+<img alt="Bookora booking confirmation" src="docs/screenshots/screenshot-207.png" />
+
+</details>
+
+<details>
+<summary>Admin Console</summary>
+
+<img alt="Bookora admin dashboard overview" src="docs/screenshots/screenshot-208.png" />
+<img alt="Bookora admin recent bookings" src="docs/screenshots/screenshot-209.png" />
+<img alt="Bookora admin utilization and top offers" src="docs/screenshots/screenshot-210.png" />
+<img alt="Bookora admin offers table" src="docs/screenshots/screenshot-211.png" />
+<img alt="Bookora admin slot inventory" src="docs/screenshots/screenshot-212.png" />
+<img alt="Bookora admin bookings table" src="docs/screenshots/screenshot-213.png" />
+<img alt="Bookora admin analytics revenue" src="docs/screenshots/screenshot-214.png" />
+<img alt="Bookora admin analytics insights" src="docs/screenshots/screenshot-215.png" />
+<img alt="Bookora business profile" src="docs/screenshots/screenshot-216.png" />
+<img alt="Bookora admin general settings" src="docs/screenshots/screenshot-217.png" />
+<img alt="Bookora admin team and billing settings" src="docs/screenshots/screenshot-218.png" />
+<img alt="Bookora admin integrations settings" src="docs/screenshots/screenshot-219.png" />
+<img alt="Bookora admin integrations and webhooks" src="docs/screenshots/screenshot-220.png" />
+<img alt="Bookora admin webhook and API keys" src="docs/screenshots/screenshot-221.png" />
+<img alt="Bookora admin security settings" src="docs/screenshots/screenshot-222.png" />
+<img alt="Bookora admin help status overview" src="docs/screenshots/screenshot-223.png" />
+<img alt="Bookora admin support incidents" src="docs/screenshots/screenshot-224.png" />
+<img alt="Bookora admin settings integrations" src="docs/screenshots/screenshot-225.png" />
+<img alt="Bookora admin settings API keys and security" src="docs/screenshots/screenshot-226.png" />
+<img alt="Bookora admin create offer form" src="docs/screenshots/screenshot-227.png" />
+
+</details>
+
 ## Data Model
 
 Core database tables:
@@ -317,10 +384,10 @@ backend/Bookora.API/Bookora.API.csproj
 - [x] Offer listing, details, booking, and confirmation flow
 - [x] Dynamic admin bookings, slots, and analytics
 - [x] `.env.example` file
-- [ ] Add final frontend screenshots
-- [ ] Add Swagger screenshot
+- [x] Final frontend screenshots embedded in README
+- [x] Swagger screenshot embedded in README
 - [ ] Add ER diagram screenshot
-- [ ] Add demo video link
+- [x] Add demo video link
 
 ## License & Hackathon Note
 
